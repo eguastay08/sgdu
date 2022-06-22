@@ -17856,7 +17856,7 @@ textarea.form-control-lg {
 }
 
 .alert-danger {
-  background-image: linear-gradient(310deg, #ea0606 0%, #ff3d59 100%);
+  background-image: linear-gradient(310deg, #141727 0%, #c20505 100%);
 }
 
 .alert-light {
@@ -18586,7 +18586,7 @@ textarea.form-control-lg {
   background: rgba(0, 0, 0, 0.2);
 }
 .card.card-background.card-background-mask-danger:after {
-  background-image: linear-gradient(310deg, #ea0606 0%, #ff667c 100%);
+  background-image: linear-gradient(310deg, #141727 0%, #ea0606 100%);
   opacity: 0.85;
 }
 .card.card-background.card-background-mask-light:before {
@@ -19100,7 +19100,7 @@ label,
 }
 
 .bg-gradient-danger {
-  background-image: linear-gradient(310deg, #ea0606 0%, #ff667c 100%);
+  background-image: linear-gradient(310deg, #141727 0%, #ea0606 100%);
 }
 
 .bg-gradient-light {
@@ -19318,10 +19318,10 @@ svg.text-warning .color-background {
 }
 
 svg.text-danger .color-foreground {
-  fill: #ea0606;
+  fill: #141727;
 }
 svg.text-danger .color-background {
-  fill: #ff667c;
+  fill: #ea0606;
 }
 
 svg.text-success .color-foreground {
@@ -20814,8 +20814,8 @@ hr.horizontal.gray-light {
   color: #fff;
 }
 .nav.nav-pills.nav-pills-danger .moving-tab .nav-link.active {
-  background: #ea0606;
-  color: #ea0606;
+  background: #141727;
+  color: #141727;
 }
 .nav.nav-pills .nav-item {
   z-index: 3;
@@ -20893,7 +20893,7 @@ hr.horizontal.gray-light {
   border: none;
 }
 .pagination.pagination-danger .page-item.active > .page-link, .pagination.pagination-danger .page-item.active > .page-link:focus, .pagination.pagination-danger .page-item.active > .page-link:hover {
-  background-image: linear-gradient(310deg, #ea0606 0%, #ff667c 100%);
+  background-image: linear-gradient(310deg, #141727 0%, #ea0606 100%);
   border: none;
 }
 .pagination.pagination-light .page-item.active > .page-link, .pagination.pagination-light .page-item.active > .page-link:focus, .pagination.pagination-light .page-item.active > .page-link:hover {
@@ -21732,7 +21732,7 @@ p {
   background-image: linear-gradient(310deg, #2835ca, #0022ff);
 }
 .text-gradient.text-info {
-  background-image: linear-gradient(310deg, #2152FF, #21D4FD);
+  background-image: linear-gradient(310deg, #141727, #3A416F);
 }
 .text-gradient.text-success {
   background-image: linear-gradient(310deg, #17AD37, #C1E823);
@@ -23282,4 +23282,60 @@ pre[class*=language-] {
   .ps {
     overflow: auto !important;
   }
+}
+.login {
+  background: url("/assets/img/logos/fondo_login.jpg") no-repeat center;
+  background-size: cover;
+}
+.login .c-form {
+  background: white;
+  border-radius: 30px;
+}
+
+.name::after {
+  content: "|";
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.welcome img {
+  width: 450px;
+  height: 300px;
+  margin-right: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.fac-red {
+  display: flex;
+  background: #D9483B;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.fac-red .number {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 5px 5px 5px 10px;
+  color: black;
+}
+.fac-red .text {
+  color: white;
+}
+
+.fac-blue {
+  display: flex;
+  background: #1F72A6;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.fac-blue .number {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 5px 5px 5px 10px;
+  color: black;
+}
+.fac-blue .text {
+  color: white;
 }

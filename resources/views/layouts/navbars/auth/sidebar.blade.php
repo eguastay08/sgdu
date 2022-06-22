@@ -2,7 +2,7 @@
 <aside style="background: #323b4d" class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
   <div class="sidenav-header d-inline">
     <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-    <a class="align-items-center d-flex flex-column m-0 navbar-brand text-wrap" href="{{ route('dashboard') }}">
+    <a class="align-items-center d-flex flex-column m-0 navbar-brand text-wrap" href="{{ route('welcome') }}">
         <div>
             <span style="font-size: 25px; border-bottom: solid red" class="font-weight-bold">SG</span>
             <span style="font-size: 25px; border-bottom: solid white" class="font-weight-bold">DU</span>
@@ -13,6 +13,14 @@
   <hr class="horizontal dark mt-0">
   <div class="collapse navbar-collapse  w-auto" id="sidenav-collapse-main">
     <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link {{ (Request::is('home') ? 'active' : '') }}" href="{{ url('home') }}">
+                <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                    <i style="font-size: 1rem;" class="fas fa-lg fa-home ps-2 pe-2 text-center text-dark {{ (Request::is('home') ? 'text-white' : 'text-dark') }} " aria-hidden="true"></i>
+                </div>
+                <span class="nav-link-text ms-1">Inicio</span>
+            </a>
+        </li>
       <li class="nav-item">
         <a class="nav-link {{ (Request::is('dashboard') ? 'active' : '') }}" href="{{ url('dashboard') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -33,21 +41,10 @@
           <span class="nav-link-text ms-1">Dashboard</span>
         </a>
       </li>
-      <li class="nav-item mt-2">
-        <h6 style="color: white" class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Administración</h6>
-      </li>
-      <li class="nav-item pb-2">
-        <a class="nav-link {{ (Request::is('user-management') ? 'active' : '') }}" href="{{ url('users') }}">
-            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                <i style="font-size: 1rem;" class="fas fa-lg fa-list-ul ps-2 pe-2 text-center text-dark {{ (Request::is('user-management') ? 'text-white' : 'text-dark') }} " aria-hidden="true"></i>
-            </div>
-            <span class="nav-link-text ms-1">Usuarios</span>
-        </a>
-      </li>
-      <li class="nav-item mt-2">
+      <!--<li class="nav-item mt-2">
         <h6 style="color: white" class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Reportes</h6>
-      </li>
-      <li class="nav-item">
+      </li>-->
+    <!--<li class="nav-item">
         <a class="nav-link {{ (Request::is('tables') ? 'active' : '') }}" href="{{ url('tables') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -66,7 +63,28 @@
           </div>
           <span class="nav-link-text ms-1">Deserción</span>
         </a>
-      </li>
+      </li>-->
+        <li class="nav-item pb-2">
+            <a class="nav-link {{ (Request::is('contact') ? 'active' : '') }}" href="{{ url('contact') }}">
+                <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                    <i style="font-size: 1rem;" class="fas fa-lg fa-comment ps-2 pe-2 text-center text-dark {{ (Request::is('contact') ? 'text-white' : 'text-dark') }} " aria-hidden="true"></i>
+                </div>
+                <span class="nav-link-text ms-1">Contáctanos</span>
+            </a>
+        </li>
+        @role('Administrator')
+        <li class="nav-item mt-2">
+            <h6 style="color: white" class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Administración</h6>
+        </li>
+        <li class="nav-item pb-2">
+            <a class="nav-link {{ (Request::is('users') ? 'active' : '') }}" href="{{ url('users') }}">
+                <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                    <i style="font-size: 1rem;" class="fas fa-lg fa-users ps-2 pe-2 text-center text-dark {{ (Request::is('users') ? 'text-white' : 'text-dark') }} " aria-hidden="true"></i>
+                </div>
+                <span class="nav-link-text ms-1">Usuarios</span>
+            </a>
+        </li>
+        @endrole
     </ul>
   </div>
 </aside>

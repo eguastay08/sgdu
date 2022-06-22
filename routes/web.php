@@ -24,21 +24,24 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => 'auth'], function () {
 
+    Route::group(['middleware' => ['role:Administrator']], function () {
+        Route::resource('users', \App\Http\Controllers\UserController::class);
+    });
+
+
     Route::get('/', [HomeController::class, 'home']);
-	Route::get('dashboard', function () {
+
+    Route::get('home', function () {
+        return view('welcome');
+    })->name('welcome');
+
+    Route::get('dashboard', function () {
 		return view('dashboard');
 	})->name('dashboard');
 
-
-	Route::get('users', function () {
-		return view('users/users');
-	})->name('users');
-
-
-
-	Route::get('users/create', function () {
-		return view('users/create');
-	})->name('users-create');
+    Route::get('contact', function () {
+        return view('contact');
+    })->name('contact');
 
 
 	Route::get('tables', function () {

@@ -1,0 +1,60 @@
+.login{
+    background: url("/assets/img/logos/fondo_login.jpg") no-repeat center;
+    background-size: cover;
+    .c-form{
+        background: white;
+        border-radius: 30px;
+    }
+}
+.name::after{
+    content: "|";
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.welcome{
+    img{
+        width: 450px;
+        height: 300px;
+        margin-right: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}
+
+.fac-red{
+    display: flex;
+    background: #D9483B;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    .number{
+        font-size: 25px;
+        font-weight: bold;
+        padding: 5px 5px 5px 10px;
+        color: black;
+    }
+    .text{
+        color: white;
+    }
+}
+
+.fac-blue{
+    display: flex;
+    background: #1F72A6;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+
+    .number{
+        font-size: 25px;
+        font-weight: bold;
+        padding: 5px 5px 5px 10px;
+        color: black;
+    }
+    .text{
+        color: white;
+    }
+}
