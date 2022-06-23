@@ -7,7 +7,7 @@
             <span style="font-size: 25px; border-bottom: solid red" class="font-weight-bold">SG</span>
             <span style="font-size: 25px; border-bottom: solid white" class="font-weight-bold">DU</span>
         </div>
-        <span class="ms-3 font-weight-bold">Sistema de Gestión de Deserción Estudiantil</span>
+        <span class="ms-3 font-weight-bold">Sistema de Gestión de Deserción Universitaria</span>
     </a>
   </div>
   <hr class="horizontal dark mt-0">

@@ -3,7 +3,7 @@
 @if (\Request::is('rtl'))
   <html dir="rtl" lang="ar">
 @else
-  <html lang="en" >
+  <html lang="es" >
 @endif
 
 <head>
@@ -12,7 +12,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="/assets/img/favicon.png">
   <title>
-      Sistema de Gestión de Deserción Estudiantil
+      Sistema de Gestión de Deserción Universitaria
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
