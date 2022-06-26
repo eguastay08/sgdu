@@ -1,0 +1,20 @@
+<div>
+    <div>
+        <span><b>Nombre:</b>{{$data['nombre']}}</span>
+    </div>
+    <div>
+        <span><b>Apellido:</b>{{$data['apellido']}}</span>
+    </div>
+    <div>
+        <span><b>Cedula:</b>{{$data['apellido']}}</span>
+    </div>
+    <div>
+        <span><b>Email:</b>{{$data['email']}}</span>
+    </div>
+    <div>
+        <span><b>Asunto:</b>{{$data['asunto']}}</span>
+    </div>
+    <div>
+        <span><b>Mensaje:</b>{{$data['mensaje']}}</span>
+    </div>
+</div>

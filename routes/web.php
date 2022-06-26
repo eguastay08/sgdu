@@ -44,6 +44,8 @@ Route::group(['middleware' => 'auth'], function () {
     })->name('contact');
 
 
+    Route::post('contact', [\App\Http\Controllers\Contact::class, 'sendMail'])->name('contact-post');
+
 	Route::get('tables', function () {
 		return view('tables');
 	})->name('tables');

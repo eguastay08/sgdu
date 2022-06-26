@@ -16,34 +16,53 @@
                                 <div class="card-header pb-0">
                                     <h5 class="bold text-center" style="color: darkred">CONTÁCTANOS</h5>
                                 </div>
-                                <form>
+                                <form method="post">
+                                    @csrf
                                     <div class="d-flex">
                                         <div class="form-group px-1 w-50">
                                             <label for="nombre">Nombre</label>
-                                            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre" required="">
+                                            <input value="{{old('nombre')}}" type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre" required="">
+                                            @error('nombre')
+                                            <p class="text-danger text-xs mt-2">{{ $message }}</p>
+                                            @enderror
                                         </div>
                                         <div class="form-group w-50">
                                             <label for="apellido">Apellido</label>
-                                            <input type="text" id="apellido" name="apellido" class="form-control" placeholder="Apellido" required="">
+                                            <input value="{{old('apellido')}}" type="text" id="apellido" name="apellido" class="form-control" placeholder="Apellido" required="">
+                                            @error('apellido')
+                                            <p class="text-danger text-xs mt-2">{{ $message }}</p>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="d-flex">
                                         <div class="form-group px-1 w-50">
                                             <label for="cedula">Cédula</label>
-                                            <input type="text" id="cedula" name="cedula" class="form-control" placeholder="Cédula" required="">
+                                            <input value="{{old('cedula')}}" type="text" id="cedula" name="cedula" class="form-control" placeholder="Cédula" required="">
+                                            @error('cedula')
+                                            <p class="text-danger text-xs mt-2">{{ $message }}</p>
+                                            @enderror
                                         </div>
                                         <div class="form-group w-50">
                                             <label for="email">Email</label>
-                                            <input type="email" id="email" name="email" class="form-control" placeholder="Email" required="">
+                                            <input value="{{old('email')}}" type="email" id="email" name="email" class="form-control" placeholder="Email" required="">
+                                            @error('email')
+                                            <p class="text-danger text-xs mt-2">{{ $message }}</p>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="asunto">Asunto</label>
-                                        <input type="text" id="asunto" name="asunto" class="form-control" placeholder="Asunto" required="">
+                                        <input value="{{old('asunto')}}" type="text" id="asunto" name="asunto" class="form-control" placeholder="Asunto" required="">
+                                        @error('asunto')
+                                        <p class="text-danger text-xs mt-2">{{ $message }}</p>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="mensaje">Mensaje</label>
-                                        <textarea  id="mensaje" name="mensaje" class="form-control" placeholder="Escribe aqui tu mensaje." required=""></textarea>
+                                        <textarea  id="mensaje" name="mensaje" class="form-control" placeholder="Escribe aqui tu mensaje." required="">{{old('mensaje')}}</textarea>
+                                        @error('mensaje')
+                                        <p class="text-danger text-xs mt-2">{{ $message }}</p>
+                                        @enderror
                                     </div>
                                     <button type="submit" class="btn bg-gradient-dark w-100">Enviar</button>
                                 </form>
